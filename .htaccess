@@ -1,0 +1,12 @@
+RewriteEngine On
+# REDIRECIONA PARA PASTA PUBLIC
+RewriteEngine on
+RewriteCond %{REQUEST_URI} !^public
+RewriteRule ^(.*)$ public/$1 [L]
+Options  -Indexes
+DirectoryIndex public/index.php public/index.html
+<files ~ "^.*\.([Hh][Tt][Aa])">
+order allow,deny
+deny from all
+satisfy all
+</files>

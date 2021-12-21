@@ -1,0 +1,13 @@
+RewriteEngine On
+DirectoryIndex index.php index.html
+#RewriteRule ^conecta/?$ DAO/bdconn.php [NC,L]
+# Renomeia pagina principal do sistema
+RewriteRule ^SISTEMA/?$ sistema.php [NC,L]
+# Renomeia formularios
+RewriteRule ^Login/?$ login.php [NC,L]
+# Renomeia funcoes
+RewriteRule ^LoginUsuario/?$ funcoes/loga.php [NC,L]
+#RedirectMatch 403 ^/DAO/?$
+# Redireciona sair para site
+#RewriteRule ^Site(.*)$ http://$1 [L,R=301]
+# Fim do arquivo
